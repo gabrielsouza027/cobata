@@ -9,8 +9,8 @@ from cachetools import TTLCache
 cache = TTLCache(maxsize=1, ttl=180)
 
 # Configuração do cliente Supabase (usar secrets do Streamlit Cloud)
-SUPABASE_URL = st.secrets["https://zozomnppwpwgtqdgtwny.supabase.co"]
-SUPABASE_KEY = st.secrets["eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpvem9tbnBwd3B3Z3RxZGd0d255Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY1NTYzMDYsImV4cCI6MjA2MjEzMjMwNn0.KcX5BOG-hiqo6baMinRuJjxmtgGKbWNZjNuzVLk9GiI"]
+SUPABASE_URL = st.secrets["supabase"]["SUPABASE_URL"]
+SUPABASE_KEY = st.secrets["supabase"]["SUPABASE_KEY"]"]
 
 # Validar URL e chave
 if not SUPABASE_URL or not SUPABASE_KEY:
